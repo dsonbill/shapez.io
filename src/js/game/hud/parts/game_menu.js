@@ -52,18 +52,15 @@ export class HUDGameMenu extends BaseHUDPart {
          * }>} */
         this.visibilityToUpdate = [];
 
-        this.buttonsElement = makeDiv(this.element, null, ["buttonContainer"]);
-
         buttons.forEach(({ id, label, handler, keybinding, badge, notification, visible }) => {
             const button = document.createElement("button");
-            button.setAttribute("data-button-id", id);
-            this.buttonsElement.appendChild(button);
+            button.classList.add(id);
+            this.element.appendChild(button);
             this.trackClicks(button, handler);
 
             if (keybinding) {
                 const binding = this.root.keyMapper.getBinding(keybinding);
                 binding.add(handler);
-                binding.appendLabelToElement(button);
             }
 
             if (visible) {
@@ -87,10 +84,8 @@ export class HUDGameMenu extends BaseHUDPart {
             }
         });
 
-        const menuButtons = makeDiv(this.element, null, ["menuButtons"]);
-
-        this.saveButton = makeDiv(menuButtons, null, ["button", "save", "animEven"]);
-        this.settingsButton = makeDiv(menuButtons, null, ["button", "settings"]);
+        this.saveButton = makeDiv(this.element, null, ["button", "save", "animEven"]);
+        this.settingsButton = makeDiv(this.element, null, ["button", "settings"]);
 
         this.trackClicks(this.saveButton, this.startSave);
         this.trackClicks(this.settingsButton, this.openSettings);

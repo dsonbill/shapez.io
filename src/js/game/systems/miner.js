@@ -5,6 +5,7 @@ import { BaseItem } from "../base_item";
 import { MinerComponent } from "../components/miner";
 import { Entity } from "../entity";
 import { GameSystemWithFilter } from "../game_system_with_filter";
+import { statisticsUnitsSeconds } from "../hud/parts/statistics_handle";
 import { MapChunkView } from "../map_chunk_view";
 
 export class MinerSystem extends GameSystemWithFilter {
@@ -93,6 +94,11 @@ export class MinerSystem extends GameSystemWithFilter {
     findChainedMiner(entity) {
         const ejectComp = entity.components.ItemEjector;
         const staticComp = entity.components.StaticMapEntity;
+        const contentsBelow = this.root.map.getLowerLayerContentXY(staticComp.origin.x, staticComp.origin.y);
+        if (!contentsBelow) {
+            // This miner has no contents
+            return null;
+        }
 
         const ejectingSlot = ejectComp.slots[0];
         const ejectingPos = staticComp.localTileToWorld(ejectingSlot.pos);
@@ -105,7 +111,10 @@ export class MinerSystem extends GameSystemWithFilter {
         if (targetContents) {
             const targetMinerComp = targetContents.components.Miner;
             if (targetMinerComp && targetMinerComp.chainable) {
-                return targetContents;
+                const targetLowerLayer = this.root.map.getLowerLayerContentXY(targetTile.x, targetTile.y);
+                if (targetLowerLayer) {
+                    return targetContents;
+                }
             }
         }
 
@@ -170,7 +179,7 @@ export class MinerSystem extends GameSystemWithFilter {
             }
 
             // Draw the item background - this is to hide the ejected item animation from
-            // the item ejecto
+            // the item ejector
 
             const padding = 3;
             const destX = staticComp.origin.x * globalConfig.tileSize + padding;

@@ -70,7 +70,7 @@ export function initMetaBuildingRegistry() {
     // Rotater
     registerBuildingVariant(11, MetaRotaterBuilding);
     registerBuildingVariant(12, MetaRotaterBuilding, enumRotaterVariants.ccw);
-    registerBuildingVariant(13, MetaRotaterBuilding, enumRotaterVariants.fl);
+    registerBuildingVariant(13, MetaRotaterBuilding, enumRotaterVariants.rotate180);
 
     // Stacker
     registerBuildingVariant(14, MetaStackerBuilding);
@@ -132,6 +132,8 @@ export function initMetaBuildingRegistry() {
     registerBuildingVariant(44, MetaVirtualProcessorBuilding, enumVirtualProcessorVariants.rotater);
     registerBuildingVariant(45, MetaVirtualProcessorBuilding, enumVirtualProcessorVariants.unstacker);
     registerBuildingVariant(46, MetaVirtualProcessorBuilding, enumVirtualProcessorVariants.shapecompare);
+    registerBuildingVariant(50, MetaVirtualProcessorBuilding, enumVirtualProcessorVariants.stacker);
+    registerBuildingVariant(51, MetaVirtualProcessorBuilding, enumVirtualProcessorVariants.painter);
 
     // Reader
     registerBuildingVariant(49, MetaReaderBuilding);
