@@ -862,6 +862,10 @@ export class Camera extends BasicSerializableObject {
      * @param {number} dt
      */
     internalUpdateMousePanning(now, dt) {
+        if (!this.root.app.focused) {
+            return;
+        }
+
         if (!this.root.app.settings.getAllSettings().enableMousePan) {
             // Not enabled
             return;
