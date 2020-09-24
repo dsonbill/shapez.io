@@ -557,9 +557,10 @@ buildings:
             name: &trash Trash
             description: Accepts inputs from all sides and destroys them. Forever.
 
-        storage:
-            name: Storage
-            description: Stores excess items, up to a given capacity. Can be used as an overflow gate.
+    storage:
+        default:
+            name: &storage Storage
+            description: Stores excess items, up to a given capacity. Prioritizes the left output and can be used as an overflow gate.
 
     wire:
         default:
@@ -578,12 +579,12 @@ buildings:
     constant_signal:
         default:
             name: &constant_signal Constant Signal
-            description: Emits a constant signal (shape, color or boolean).
+            description: Emits a constant signal, which can be either a shape, color or boolean.
 
     lever:
         default:
             name: &lever Switch
-            description: Can be toggled to emit 1 / 0
+            description: Can be toggled to emit a boolean signal, which can then be used to control for example an item filter.
 
     logic_gate:
         default:
@@ -606,20 +607,17 @@ buildings:
     filter:
         default:
             name: &filter Filter
-            # TEMP
-            description: Only allows through items which match exactly the provided shape / color. If you put in a boolean 1, it allows everything through, if you put in a 0 it will allow nothing through.
+            description: Connect with a signal to route all matching items to the top and the remaining to the right. Can be controlled with boolean signals too.
 
     display:
         default:
             name: &display Display
-            # TEMP
-            description: Can be connected on the wires layer to show a color or shape. When inputting a boolean item, the display will be white if the value is 1.
+            description: Connect a signal to show it on the display - It can be a shape, color or boolean.
 
     reader:
         default:
             name: &reader Belt Reader
-            # TEMP
-            description: Allows to read the current item from a belt, as well as measuring the throughput.
+            description: Allows to measure belt throughput. Outputs the last read item on the wires layer (once unlocked).
 
     virtual_processor:
         default:
@@ -670,8 +668,8 @@ storyRewards:
         desc: The <strong>mixer</strong> has been unlocked - Combine two colors using <strong>additive blending</strong> with this building!
 
     reward_stacker:
-        title: Combiner
-        desc: You can now combine shapes with the <strong>combiner</strong>! Both inputs are combined, and if they can be put next to each other, they will be <strong>fused</strong>. If not, the right input is <strong>stacked on top</strong> of the left input!
+        title: Stacker
+        desc: You can now combine shapes with the <strong>stacker</strong>! Both inputs are combined, and if they can be put next to each other, they will be <strong>fused</strong>. If not, the right input is <strong>stacked on top</strong> of the left input!
 
     reward_balancer:
         title: Balancer
@@ -703,7 +701,7 @@ storyRewards:
     reward_splitter:
         title: Compact Splitter
         desc: >-
-            You have unlocked a merger variant of the <strong>balancer</strong> - It accepts one input and splits them into two!
+            You have unlocked a splitter variant of the <strong>balancer</strong> - It accepts one input and splits them into two!
 
     reward_belt_reader:
         title: Belt reader
@@ -711,7 +709,7 @@ storyRewards:
             You have now unlocked the <strong>belt reader</strong>! It allows you to measure the throughput of a belt.<br><br>And wait until you unlock wires - then it gets really useful!
 
     reward_cutter_quad:
-        title: Quad Cutting
+        title: Quad Cutter
         desc: You have unlocked a variant of the <strong>cutter</strong> - It allows you to cut shapes in <strong>four parts</strong> instead of just two!
 
     reward_painter_double:
@@ -726,7 +724,9 @@ storyRewards:
 
     reward_storage:
         title: Storage Buffer
-        desc: You have unlocked a variant of the <strong>trash</strong> - It allows you to store items up to a given capacity!
+        desc: >-
+            You have unlocked the <strong>storage</strong> building - It allows you to store items up to a given capacity!<br><br>
+            It priorities the left output, so you can also use it as an <strong>overflow gate</strong>!
 
     reward_blueprints:
         title: Blueprints
@@ -1030,6 +1030,7 @@ keybindings:
         mixer: *mixer
         painter: *painter
         trash: *trash
+        storage: *storage
         wire: *wire
         constant_signal: *constant_signal
         logic_gate: *logic_gate
@@ -1038,6 +1039,7 @@ keybindings:
         wire_tunnel: *wire_tunnel
         display: *display
         reader: *reader
+        virtual_processor: *virtual_processor
         # ---
 
         pipette: Pipette
@@ -1132,11 +1134,12 @@ tips:
     - Use <b>CTRL</b> + Click to select an area.
     - Building too close to the hub can get in the way of later projects.
     - The pin icon next to each shape in the upgrade list pins it to the screen.
-    - Mix all primary colours together to make white!
+    - Mix all primary colors together to make white!
     - You have an infinite map, don't cramp your factory, expand!
-    - Also try Factorio! It's my favourite game.
+    - Also try Factorio! It's my favorite game.
     - The quad cutter cuts clockwise starting from the top right!
     - You can download your savegames in the main menu!
     - This game has a lot of useful keybindings! Be sure to check out the settings page.
     - This game has a lot of settings, be sure to check them out!
-    - The marker to your hub has a small compass to indicate it's direction!
+    - The marker to your hub has a small compass to indicate its direction!
+    - To clear belts, cut the area and then paste it at the same location.
