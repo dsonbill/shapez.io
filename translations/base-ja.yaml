@@ -1,58 +1,50 @@
 steamPage:
     shortText: shapez.ioは無限のマップ内で様々な"形"を資源とし、段々と複雑になっていく形の作成や合成の自動化を目指して工場を構築するゲームです。
-    longText: >-
-        [img]{STEAM_APP_IMAGE}/extras/store_page_gif.gif[/img]
+    discordLinkShort: Official Discord
+    intro: >-
+        Shapez.io is a relaxed game in which you have to build factories for the
+        automated production of geometric shapes.  
 
-        shapez.ioは無限のマップ内で様々な"形"を資源とし、段々と複雑になっていく形の作成や合成の自動化を目指して工場を構築するゲームです。 求められた"形"を届けることで様々なアップグレードを手に入れることができ、さらに工場の効率を上げることができます。
+        As the level increases, the shapes become more and more complex, and you have to spread out on the infinite map.
 
-        "形"の需要が増えるにつれ、工場を拡大する必要があります - より多くの資源を手に入れるために[b]無限のマップ[!b]を開拓していく必要があります。
+        And as if that wasn't enough, you also have to produce exponentially more to satisfy the demands - the only thing that helps is scaling!
 
-        "形"に色を塗る必要もあります - 赤、緑、青を混ぜ、さまざまな色を作り需要に応じて色が塗られた"形"を製造できます。
+        While you only process shapes at the beginning, you have to color them later - for this you have to extract and mix colors!
 
-        現在このゲームには18個のレベルがあり、今後これを拡大していく予定です - 他にも様々なアップデートを準備しています!
+        Buying the game on Steam gives you access to the full version, but you can also play a demo on shapez.io first and decide later!
+    title_advantages: Standalone Advantages
+    advantages:
+        - <b>12 New Level</b> for a total of 26 levels
+        - <b>18 New Buildings</b> for a fully automated factory!
+        - <b>20 Upgrade Tiers</b> for many hours of fun!
+        - <b>Wires Update</b> for an entirely new dimension!
+        - <b>Dark Mode</b>!
+        - Unlimited Savegames
+        - Unlimited Markers
+        - Support me! ❤️
+    title_future: Planned Content
+    planned:
+        - Blueprint Library (Standalone Exclusive)
+        - Steam Achievements
+        - Puzzle Mode
+        - Minimap
+        - Mods
+        - Sandbox mode
+        - ... and a lot more!
+    title_open_source: This game is open source!
+    title_links: Links
+    links:
+        discord: Official Discord
+        roadmap: Roadmap
+        subreddit: Subreddit
+        source_code: Source code (GitHub)
+        translate: Help translate
+    text_open_source: >-
+        Anybody can contribute, I'm actively involved in the community and
+        attempt to review all suggestions and take feedback into consideration
+        where possible.
 
-        このゲームを買うことによってスタンドアローン版の様々な機能が使えるようになり、新しいアップデートもすぐに手に入ります。
-
-        [b]スタンドアローン版で使える機能[/b]
-
-        [list]
-            [*] ダークモード
-            [*] ウェイポイントの制限がありません
-            [*] セーブの数の制限がありません
-            [*] 様々な設定
-            [*] 追加予定: ワイヤーとエネルギー! (7月末を目指しています)
-            [*] 追加予定: より多くのレベル
-            [*] shapez.io開発が助けられます❤️
-        [/list]
-
-        [b]今後の予定[/b]
-
-        週に一回はアップデートを出せることを目指しています。
-
-        [list]
-            [*] Different maps and challenges (e.g. maps with obstacles)
-            [*] Puzzles (Deliver the requested shape with a restricted area / set of buildings)
-            [*] A story mode where buildings have a cost
-            [*] Configurable map generator (Configure resource/shape size/density, seed and more)
-            [*] Additional types of shapes
-            [*] Performance improvements (The game already runs pretty well!)
-            [*] And much more!
-        [/list]
-
-        [b]このゲームはオープンソースです![/b]
-
-        誰でもこのゲームの開発を手伝うことができ、私もプレーヤーの意見をできるだけゲームに取り入れようとしています。 Trelloで今後の予定が全て確認できます。
-
-        [b]外部リンク[/b]
-
-        [list]
-            [*] [url=https://discord.com/invite/HN7EVzV]公式Discord[/url]
-            [*] [url=https://trello.com/b/ISQncpJP/shapezio]今後の予定[/url]
-            [*] [url=https://www.reddit.com/r/shapezio]Reddit[/url]
-            [*] [url=https://github.com/tobspr/shapez.io]ソースコード(GitHub)[/url]
-            [*] [url=https://github.com/tobspr/shapez.io/blob/master/translations/README.md]翻訳に参加[/url]
-        [/list]
-    discordLink: 公式Discord - 私と話せます!
+        Be sure to check out my trello board for the full roadmap!
 global:
     loading: ロード中
     error: エラー
@@ -191,6 +183,11 @@ dialogs:
     renameSavegame:
         title: Rename Savegame
         desc: You can rename your savegame here.
+    entityWarning:
+        title: Performance Warning
+        desc: You have placed a lot of buildings, this is just a friendly reminder that
+            the game can not handle an endless count of buildings - So try to
+            keep your factories compact!
 ingame:
     keybindingsOverlay:
         moveMap: マップ移動
@@ -323,6 +320,38 @@ ingame:
         one_miner: 1 Miner
         n_miners: <amount> Miners
         limited_items: Limited to <max_throughput>
+    watermark:
+        title: Demo version
+        desc: Click here to see the Steam version advantages!
+        get_on_steam: Get on steam
+    standaloneAdvantages:
+        title: Get the full version!
+        no_thanks: No, thanks!
+        points:
+            levels:
+                title: 12 New Levels
+                desc: For a total of 26 levels!
+            buildings:
+                title: 18 New Buildings
+                desc: Fully automate your factory!
+            savegames:
+                title: ∞ Savegames
+                desc: As many as your heart desires!
+            upgrades:
+                title: 20 Upgrade Tiers
+                desc: This demo version has only 5!
+            markers:
+                title: ∞ Markers
+                desc: Never get lost in your factory!
+            wires:
+                title: Wires
+                desc: An entirely new dimension!
+            darkmode:
+                title: Dark Mode
+                desc: Stop hurting your eyes!
+            support:
+                title: Support me
+                desc: I develop it in my spare time!
 shopUpgrades:
     belt:
         name: ベルト、ディストリビュータ & トンネル
@@ -341,6 +370,7 @@ buildings:
         deliver: 納品
         toUnlock: 解除
         levelShortcut: レベル
+        endOfDemo: End of Demo
     belt:
         default:
             name: コンベアベルト
@@ -514,6 +544,11 @@ buildings:
             name: Virtual Painter
             description: Virtually paints the shape from the bottom input with the shape on
                 the right input.
+    item_producer:
+        default:
+            name: Item Producer
+            description: Available in sandbox mode only, outputs the given signal from the
+                wires layer on the regular layer.
 storyRewards:
     reward_cutter_and_trash:
         title: 形の切断
@@ -561,9 +596,6 @@ storyRewards:
         title: 着色機 (ダブル)
         desc: <strong>着色機</strong>のバリエーションが利用可能になりました。 -
             通常の着色機と同様に機能しますが、ひとつの色の消費で<strong>一度に2つの形</strong>を着色処理できます！
-    reward_painter_quad:
-        title: 四分割着色
-        desc: <strong>着色機</strong>のバリエーションが利用可能になりました。 - 形のすべてのパーツを別の色で塗り分けることができます！
     reward_storage:
         title: 余剰の貯蓄
         desc: <strong>ゴミ箱</strong>のバリエーションが利用可能になりました。 - 容量上限までアイテムを格納することができます！
@@ -601,13 +633,6 @@ storyRewards:
         title: Rotater (180 degrees)
         desc: You just unlocked the 180 degress <strong>rotater</strong>! - It allows
             you to rotate a shape by 180 degress (Surprise! :D)
-    reward_wires_filters_and_levers:
-        title: "Wires: Filters & Levers"
-        desc: You just unlocked the <strong>wires layer</strong>! It is a separate layer
-            on top of the regular layer and introduces a lot of new
-            mechanics!<br><br> Since it can be overwhelming a bit, I added a
-            small tutorial - Be sure to have <strong>tutorials enabled</strong>
-            in the settings!
     reward_display:
         title: Display
         desc: You have unlocked the <strong>Display</strong> - Connect a signal on the
@@ -635,6 +660,23 @@ storyRewards:
             shape requested by the HUB (I recommend to try it!).<br><br> - Build
             something cool with wires.<br><br> - Continue to play
             regulary.<br><br> Whatever you choose, remember to have fun!
+    reward_wires_painter_and_levers:
+        title: Wires & Quad Painter
+        desc: "You just unlocked the <strong>Wires Layer</strong>: It is a separate
+            layer on top of the regular layer and introduces a lot of new
+            mechanics!<br><br> For the beginning I unlocked you the <strong>Quad
+            Painter</strong> - Connect the slots you would like to paint with on
+            the wires layer!<br><br> To switch to the wires layer, press
+            <strong>E</strong>."
+    reward_filter:
+        title: Item Filter
+        desc: You unlocked the <strong>Item Filter</strong>! It will route items either
+            to the top or the right output depending on whether they match the
+            signal from the wires layer or not.<br><br> You can also pass in a
+            boolean signal (1 / 0) to entirely activate or disable it.
+    reward_demo_end:
+        title: End of Demo
+        desc: You have reached the end of the demo version!
 settings:
     title: 設定
     categories:
@@ -839,7 +881,6 @@ keybindings:
         constant_signal: Constant Signal
         logic_gate: Logic Gate
         lever: Switch (regular)
-        lever_wires: Switch (wires)
         filter: Filter
         wire_tunnel: Wire Crossing
         display: Display
@@ -848,6 +889,8 @@ keybindings:
         transistor: Transistor
         analyzer: Shape Analyzer
         comparator: Compare
+        item_producer: Item Producer (Sandbox)
+        copyWireValue: "Wires: Copy value below cursor"
 about:
     title: このゲームについて
     body: >-
@@ -931,3 +974,4 @@ tips:
     - To clear belts, cut the area and then paste it at the same location.
     - Press F4 to show your FPS and Tick Rate.
     - Press F4 twice to show the tile of your mouse and camera.
+    - You can click a pinned shape on the left side to unpin it.

@@ -1,60 +1,51 @@
 steamPage:
     shortText: shapez.io giderek karmaşıklaşan şekillerin sonsuz bir harita üzerinde
         üretimi ve birleştirilmesi hakında bir oyundur.
-    longText: >-
-        [img]{STEAM_APP_IMAGE}/extras/store_page_gif.gif[/img]
+    discordLinkShort: Official Discord
+    intro: >-
+        Shapez.io is a relaxed game in which you have to build factories for the
+        automated production of geometric shapes.  
 
-        shapez.io giderek karmaşıklaşan şekillerin sonsuz bir harita üzerinde üretimi ve birleştirilmesi hakında bir oyundur. Talep edilen şekilleri verdikten sonra oyundaki geliştirmeleri açıp fabrikanızı hızlandırabilirsiniz.
+        As the level increases, the shapes become more and more complex, and you have to spread out on the infinite map.
 
-        Şekiller için talep artınca fabrikanı büyütüp talebi karşılamalısın - Kaynakları unutma! Sonsuz [b]sonsuz haritada[/b] genişlemen gerekecek!
+        And as if that wasn't enough, you also have to produce exponentially more to satisfy the demands - the only thing that helps is scaling!
 
-        Yakında renkleri karıştırman ve şekileri boyaman gerekecek - Talebi karşılamak için kırmızı, mavi ve yeşili karıştırıp şekilleri boyacaksın
+        While you only process shapes at the beginning, you have to color them later - for this you have to extract and mix colors!
 
-        Bu oyun 18 kademeli seviye içerir (Seni saatlerce meşgul tutumalı) ama sürekli yeni şeyler ekliyorum - Ekleyecek çok şey var!
+        Buying the game on Steam gives you access to the full version, but you can also play a demo on shapez.io first and decide later!
+    title_advantages: Standalone Advantages
+    advantages:
+        - <b>12 New Level</b> for a total of 26 levels
+        - <b>18 New Buildings</b> for a fully automated factory!
+        - <b>20 Upgrade Tiers</b> for many hours of fun!
+        - <b>Wires Update</b> for an entirely new dimension!
+        - <b>Dark Mode</b>!
+        - Unlimited Savegames
+        - Unlimited Markers
+        - Support me! ❤️
+    title_future: Planned Content
+    planned:
+        - Blueprint Library (Standalone Exclusive)
+        - Steam Achievements
+        - Puzzle Mode
+        - Minimap
+        - Mods
+        - Sandbox mode
+        - ... and a lot more!
+    title_open_source: This game is open source!
+    title_links: Links
+    links:
+        discord: Official Discord
+        roadmap: Roadmap
+        subreddit: Subreddit
+        source_code: Source code (GitHub)
+        translate: Help translate
+    text_open_source: >-
+        Anybody can contribute, I'm actively involved in the community and
+        attempt to review all suggestions and take feedback into consideration
+        where possible.
 
-        Bu oyunu satın almak indirilebilir versiyonuna (Ek özellikler var) ve yeni özeliklerine erişebileceksiniz.
-
-        [b]İndirebilir versiyonun avantajları[/b]
-
-        [list]
-            [*] Karanlık mod
-            [*] Sonsuz işaret
-            [*] Sonsuz kayıt alanı
-            [*] Ek ayarlar
-            [*] Yakında geliyor: Kablo ve enerji! Temmuz sonunu hedefliyorum.
-            [*] Yakında geliyor: Daha fazla seviyeler
-            [*] Shapez.io'yu geliştirmeme izin veriyor ❤️
-        [/list]
-
-        [b]Gelecek güncellemeler[/b]
-
-        Oyunu sık sık güncelliyorum ve en az haftada bir güncellemeye çalışıyorum!
-
-        [list]
-            [*] Farklı haritalar ve görevler (Örneğin engelli haritalar)
-            [*] Yapbozlar (İstenen şekilleri kısıtlı bir alanda / belli yapılar ile)
-            [*] Hikaye modu ile yapıların maliyeti olacak.
-            [*] Ayarlanabilir harita yapımı(Ayarlanabilir kaynak/şekil  boyut/sıklığı, seedler ve daha fazlası)
-            [*] Ek şekiller
-            [*] Performans optimizasyonları (oyun zaten iyi çalışıyor)
-            [*] Ve daha fazlası
-        [/list]
-
-        [b]Bu oyun açık kaynaklı![/b]
-
-        Bu oyuna herkes katkıda bulunabilir! Aktif olarak toplulukğa katkıda bulunuyorum ve bütün önerileri gözden geçirmeye çalışıyorum. Yol planıma Trello'dan bakmayı unutmayın!
-
-
-        [b]Links[/b]
-
-        [list]
-            [*] [url=https://discord.com/invite/HN7EVzV]Dİscord'umuz[/url]
-            [*] [url=https://trello.com/b/ISQncpJP/shapezio]yol planı[/url]
-            [*] [url=https://www.reddit.com/r/shapezio]Subreddit[/url]
-            [*] [url=https://github.com/tobspr/shapez.io]KAynak kodu (GitHub)[/url]
-            [*] [url=https://github.com/tobspr/shapez.io/blob/master/translations/README.md]Çevirmeye yardımcı olun[/url]
-        [/list]
-    discordLink: Official Discord - Chat with me!
+        Be sure to check out my trello board for the full roadmap!
 global:
     loading: Yüklenİyor
     error: Hata
@@ -210,6 +201,11 @@ dialogs:
     renameSavegame:
         title: Rename Savegame
         desc: You can rename your savegame here.
+    entityWarning:
+        title: Performance Warning
+        desc: You have placed a lot of buildings, this is just a friendly reminder that
+            the game can not handle an endless count of buildings - So try to
+            keep your factories compact!
 ingame:
     keybindingsOverlay:
         moveMap: Hareket Et
@@ -346,6 +342,38 @@ ingame:
         one_miner: 1 Miner
         n_miners: <amount> Miners
         limited_items: Limited to <max_throughput>
+    watermark:
+        title: Demo version
+        desc: Click here to see the Steam version advantages!
+        get_on_steam: Get on steam
+    standaloneAdvantages:
+        title: Get the full version!
+        no_thanks: No, thanks!
+        points:
+            levels:
+                title: 12 New Levels
+                desc: For a total of 26 levels!
+            buildings:
+                title: 18 New Buildings
+                desc: Fully automate your factory!
+            savegames:
+                title: ∞ Savegames
+                desc: As many as your heart desires!
+            upgrades:
+                title: 20 Upgrade Tiers
+                desc: This demo version has only 5!
+            markers:
+                title: ∞ Markers
+                desc: Never get lost in your factory!
+            wires:
+                title: Wires
+                desc: An entirely new dimension!
+            darkmode:
+                title: Dark Mode
+                desc: Stop hurting your eyes!
+            support:
+                title: Support me
+                desc: I develop it in my spare time!
 shopUpgrades:
     belt:
         name: Taşıma Bandı, Dağıtıcılar & Tüneller
@@ -364,6 +392,7 @@ buildings:
         deliver: Teslİm et
         toUnlock: Açılacak
         levelShortcut: SVY
+        endOfDemo: End of Demo
     belt:
         default:
             name: Taşıma Bandı
@@ -545,6 +574,11 @@ buildings:
             name: Virtual Painter
             description: Virtually paints the shape from the bottom input with the shape on
                 the right input.
+    item_producer:
+        default:
+            name: Item Producer
+            description: Available in sandbox mode only, outputs the given signal from the
+                wires layer on the regular layer.
 storyRewards:
     reward_cutter_and_trash:
         title: Şekİllerİ Kesmek
@@ -610,10 +644,6 @@ storyRewards:
         desc: <strong>Boyayıcının<strong> başka bir türünü açtın - Sıradan bir boyayıcı
             gibi çalışır, fakat <strong>iki şekli birden</strong> boyayarak iki
             boya yerine sadece bir boya harcar!
-    reward_painter_quad:
-        title: Dörtlü Boyama
-        desc: <strong>Boyayıcının<strong> başka bir türünü açtın - Şeklin her parçasının
-            bağımsız olarak boyanmasını sağlar!
     reward_storage:
         title: Depo Sağlayıcı
         desc: <strong>Çöpün</strong> farklı bir türünü açtın - Bu tür belirli bir sınıra
@@ -658,13 +688,6 @@ storyRewards:
         title: Rotater (180 degrees)
         desc: You just unlocked the 180 degress <strong>rotater</strong>! - It allows
             you to rotate a shape by 180 degress (Surprise! :D)
-    reward_wires_filters_and_levers:
-        title: "Wires: Filters & Levers"
-        desc: You just unlocked the <strong>wires layer</strong>! It is a separate layer
-            on top of the regular layer and introduces a lot of new
-            mechanics!<br><br> Since it can be overwhelming a bit, I added a
-            small tutorial - Be sure to have <strong>tutorials enabled</strong>
-            in the settings!
     reward_display:
         title: Display
         desc: You have unlocked the <strong>Display</strong> - Connect a signal on the
@@ -692,6 +715,23 @@ storyRewards:
             shape requested by the HUB (I recommend to try it!).<br><br> - Build
             something cool with wires.<br><br> - Continue to play
             regulary.<br><br> Whatever you choose, remember to have fun!
+    reward_wires_painter_and_levers:
+        title: Wires & Quad Painter
+        desc: "You just unlocked the <strong>Wires Layer</strong>: It is a separate
+            layer on top of the regular layer and introduces a lot of new
+            mechanics!<br><br> For the beginning I unlocked you the <strong>Quad
+            Painter</strong> - Connect the slots you would like to paint with on
+            the wires layer!<br><br> To switch to the wires layer, press
+            <strong>E</strong>."
+    reward_filter:
+        title: Item Filter
+        desc: You unlocked the <strong>Item Filter</strong>! It will route items either
+            to the top or the right output depending on whether they match the
+            signal from the wires layer or not.<br><br> You can also pass in a
+            boolean signal (1 / 0) to entirely activate or disable it.
+    reward_demo_end:
+        title: End of Demo
+        desc: You have reached the end of the demo version!
 settings:
     title: Ayarlar
     categories:
@@ -916,7 +956,6 @@ keybindings:
         constant_signal: Constant Signal
         logic_gate: Logic Gate
         lever: Switch (regular)
-        lever_wires: Switch (wires)
         filter: Filter
         wire_tunnel: Wire Crossing
         display: Display
@@ -925,6 +964,8 @@ keybindings:
         transistor: Transistor
         analyzer: Shape Analyzer
         comparator: Compare
+        item_producer: Item Producer (Sandbox)
+        copyWireValue: "Wires: Copy value below cursor"
 about:
     title: Oyun Hakkında
     body: >-
@@ -1009,3 +1050,4 @@ tips:
     - To clear belts, cut the area and then paste it at the same location.
     - Press F4 to show your FPS and Tick Rate.
     - Press F4 twice to show the tile of your mouse and camera.
+    - You can click a pinned shape on the left side to unpin it.
